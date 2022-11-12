@@ -1,24 +1,32 @@
-import { FC, useEffect, useState } from "react";
-import { ListItem } from "./components/ListItem";
-import axios from "axios";
-import type { User } from "./type/user";
+import { FC } from "react";
+import { useState, useCallback } from "react";
+import { ChildArea } from "./ChildArea";
 
 export const App: FC = () => {
-	const [users, setUsers] = useState<User[]>([]);
+	console.log("Appがレンダリングされた");
 
-	//画面表示時にユーザー情報取得
-	useEffect(() => {
-		axios.get<User[]>("https://example.com/users").then((res) => {
-			setUsers(res.data);
-		});
-	});
+	const [text, setText] = useState("");
+	const [open, setOpen] = useState(false);
+
+	const onChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setText(e.target.value);
+	};
+
+	const onClickOpen = () => {
+		setOpen(!open);
+	};
+
+	const onClickClose = useCallback(() => {
+		setOpen(false);
+	}, []);
 
 	return (
 		<div>
-			<h1>今日は</h1>
-			{users.map((user) => (
-				<ListItem id={user.id} name={user.name} age={user.age} />
-			))}
+			<input value={text} onChange={onChangeText} />
+			<br />
+			<br />
+			<button onClick={onClickOpen}>表示</button>
+			<ChildArea open={open} onClickClose={onClickClose} />
 		</div>
 	);
 };
