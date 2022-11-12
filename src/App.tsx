@@ -15,6 +15,7 @@ export const App: FC = () => {
 
 	return (
 		<div>
+			<h1>今日は</h1>
 			{users.map((user) => (
 				<ListItem id={user.id} name={user.name} age={user.age} />
 			))}
