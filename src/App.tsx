@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 import { ChildArea } from "./ChildArea";
 import { CssModules } from "./components/CssModules";
 import { InlineStyle } from "./components/InlineStyle";
+import { StyledComponents } from "./components/StyledComponents";
 
 export const App: FC = () => {
 	console.log("Appがレンダリングされた");
@@ -31,6 +32,7 @@ export const App: FC = () => {
 			<ChildArea open={open} onClickClose={onClickClose} />
 			<InlineStyle />
 			<CssModules />
+			<StyledComponents />
 		</div>
 	);
 };
