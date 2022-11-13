@@ -9,6 +9,7 @@ export const InlineStyle: FC = () => {
 	);
 };
 
+/* flexDirection指定すると注意されるのはなぜ？ */
 const containerStyle = {
 	width: "100%",
 	display: "flex",
