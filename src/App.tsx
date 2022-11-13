@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useState, useCallback } from "react";
 import { ChildArea } from "./ChildArea";
 import { CssModules } from "./components/CssModules";
+import { Emotion } from "./components/Emotion";
 import { InlineStyle } from "./components/InlineStyle";
 import { StyledComponents } from "./components/StyledComponents";
 
@@ -33,6 +34,7 @@ export const App: FC = () => {
 			<InlineStyle />
 			<CssModules />
 			<StyledComponents />
+			<Emotion />
 		</div>
 	);
 };
