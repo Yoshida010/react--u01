@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useState, useCallback } from "react";
 import { ChildArea } from "./ChildArea";
+import { CssModules } from "./components/CssModules";
 import { InlineStyle } from "./components/InlineStyle";
 
 export const App: FC = () => {
@@ -29,6 +30,7 @@ export const App: FC = () => {
 			<button onClick={onClickOpen}>表示</button>
 			<ChildArea open={open} onClickClose={onClickClose} />
 			<InlineStyle />
+			<CssModules />
 		</div>
 	);
 };
