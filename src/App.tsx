@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { useState, useCallback } from "react";
 import { ChildArea } from "./ChildArea";
-import { CssModules } from "./components/CssModules";
-import { Emotion } from "./components/Emotion";
-import { InlineStyle } from "./components/InlineStyle";
-import { StyledComponents } from "./components/StyledComponents";
+import { CssModules } from "./udemy04/CssModules";
+import { Emotion } from "./udemy04/Emotion";
+import { InlineStyle } from "./udemy04/InlineStyle";
+import { StyledComponents } from "./udemy04/StyledComponents";
 
 export const App: FC = () => {
 	console.log("Appがレンダリングされた");
