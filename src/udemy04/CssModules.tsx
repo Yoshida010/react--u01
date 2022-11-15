@@ -1,5 +1,5 @@
 import { FC } from "react";
-import classes from "./CssModules.module.scss";
+import classes from "../scss/CssModules.module.scss";
 
 export const CssModules: FC = () => {
 	return (
