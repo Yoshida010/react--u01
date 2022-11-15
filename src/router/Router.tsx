@@ -3,6 +3,7 @@
 import { Route, Switch } from "react-router-dom";
 import { Home } from "../udemy05/Home";
 import { Page2 } from "../udemy05/Page2";
+import { Page404 } from "../udemy05/Page404";
 import { page1Routes } from "./Page1Routes";
 import { page2Routes } from "./Page2Routes";
 
@@ -36,6 +37,9 @@ export const Router = () => {
 					</Switch>
 				)}
 			/>
+			<Route path="*">
+				<Page404 />
+			</Route>
 		</Switch>
 	);
 };
