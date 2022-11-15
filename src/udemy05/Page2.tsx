@@ -8,7 +8,8 @@ export const Page2: FC = () => {
 		<div>
 			<h1>Page2</h1>
 			{/* パラムス */}
-			<Link to="/page2/200">URLparameterのページ</Link>
+			<Link to="/page2/20">URLParameterのページ</Link>
+			<Link to="/page2/200?name=hogehoge">Query parameterのページ</Link>
 		</div>
 	);
 };
