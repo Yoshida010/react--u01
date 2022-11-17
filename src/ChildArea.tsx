@@ -10,10 +10,10 @@ export const ChildArea: FC<Props> = memo((props) => {
 
 	console.log("ChalidAreaがレンダリングされた");
 
-	const data = [...Array(2000).keys()];
-	data.forEach(() => {
-		console.log("...");
-	});
+	// const data = [...Array(2000).keys()];
+	// data.forEach(() => {
+	// 	console.log("...");
+	// });
 
 	return (
 		<>
