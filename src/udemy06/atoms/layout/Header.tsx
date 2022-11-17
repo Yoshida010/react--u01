@@ -8,7 +8,7 @@ export const Header: FC = () => {
 	return (
 		<SHeader>
 			<SLink to="/">HOME</SLink>
-			<SLink to="/">USERS</SLink>
+			<SLink to="/users">USERS</SLink>
 		</SHeader>
 	);
 };
