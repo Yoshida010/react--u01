@@ -23,7 +23,7 @@ const users = [...Array(10).keys()].map((val) => {
 
 export const Users: FC = () => {
 	const { state } = useLocation();
-	const { setUserInfo } = useContext(UserContext);
+	// const { setUserInfo } = useContext(UserContext);
 
 	return (
 		<SContainer>
