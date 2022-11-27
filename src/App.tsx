@@ -10,11 +10,12 @@ import { StyledComponents } from "./udemy04/StyledComponents";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { Router } from "./router/Router";
 import { PrimaryButton } from "./udemy06/atoms/button/PrimaryButton";
-import { SecondaryButton } from "./udemy06/atoms/SecondaryButton";
+import { SecondaryButton } from "./udemy06/atoms/button/SecondaryButton";
 import { SearchInput } from "./udemy06/molecules/SearchInput";
 import { UserCard } from "./udemy06/organisms/user/UserCard";
 import { HeaderOnly } from "./udemy06/templates/HeaderOnly";
 import { DefaultLayout } from "./udemy06/templates/DefaultLayout";
+import { UserProvider } from "./udemy06/providers/UserProvider";
 
 export const App: FC = () => {
 	console.log("Appがレンダリングされた");
@@ -38,31 +39,33 @@ export const App: FC = () => {
 
 	return (
 		<>
-			{/* -------- udemy04 -------- */}
-			{/* <div>
-				<input value={text} onChange={onChangeText} />
-        <br />
-        <br />
-        <button onClick={onClickOpen}>表示</button>
-        <ChildArea open={open} onClickClose={onClickClose} />
-        <InlineStyle />
-        <CssModules />
-        <StyledComponents />
-        <Emotion />
-			</div> */}
+			<UserProvider>
+				{/* -------- udemy04 -------- */}
+				{/* <div>
+          <input value={text} onChange={onChangeText} />
+          <br />
+          <br />
+          <button onClick={onClickOpen}>表示</button>
+          <ChildArea open={open} onClickClose={onClickClose} />
+          <InlineStyle />
+          <CssModules />
+          <StyledComponents />
+          <Emotion />
+        </div> */}
 
-			{/* -------- udemy05 --------  */}
-			{/* <BrowserRouter>
-				<div>
-					<Link to="/">Home</Link>
-					<Link to="/page1">Page1</Link>
-					<Link to="/page2">Page2</Link>
-				</div>
+				{/* -------- udemy05 --------  */}
+				{/* <BrowserRouter>
+          <div>
+            <Link to="/">Home</Link>
+            <Link to="/page1">Page1</Link>
+            <Link to="/page2">Page2</Link>
+          </div>
+          <Router />
+        </BrowserRouter> */}
+
+				{/* -------- udemy06 -------- */}
 				<Router />
-			</BrowserRouter> */}
-
-			{/* -------- udemy06 -------- */}
-			<Router />
+			</UserProvider>
 		</>
 	);
 };
