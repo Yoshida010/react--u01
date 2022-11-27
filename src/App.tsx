@@ -16,6 +16,7 @@ import { UserCard } from "./udemy06/organisms/user/UserCard";
 import { HeaderOnly } from "./udemy06/templates/HeaderOnly";
 import { DefaultLayout } from "./udemy06/templates/DefaultLayout";
 import { UserProvider } from "./udemy06/providers/UserProvider";
+import axios from "axios";
 
 export const App: FC = () => {
 	console.log("Appがレンダリングされた");
@@ -35,6 +36,32 @@ export const App: FC = () => {
 	// const onClickClose = useCallback(() => {
 	// 	setOpen(false);
 	// }, []);
+	/* ------------------------- */
+
+	/* -------- udemy08 -------- */
+	const onClickUsers = () => {
+		/* getで取得したい情報のURLを指定 */
+		/* thenの引数には取得したデータが入る */
+		/* catchはデータ取得できなかった場合にエラーを表示 */
+		axios
+			.get("https://jsonplaceholder.typicode.com/users")
+			.then((res) => {
+				console.log(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
+	const onClickUser1 = () => {
+		axios
+			.get("https://jsonplaceholder.typicode.com/users?id=1")
+			.then((res) => {
+				console.log(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	};
 	/* ------------------------- */
 
 	return (
@@ -64,6 +91,10 @@ export const App: FC = () => {
         </BrowserRouter> */}
 
 				{/* -------- udemy06 -------- */}
+
+				{/* -------- udemy08 -------- */}
+				<button onClick={onClickUsers}>users</button>
+				<button onClick={onClickUser1}>user1</button>
 				<Router />
 			</UserProvider>
 		</>
