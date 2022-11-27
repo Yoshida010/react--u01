@@ -39,29 +39,29 @@ export const App: FC = () => {
 	/* ------------------------- */
 
 	/* -------- udemy08 -------- */
-	const onClickUsers = () => {
-		/* getで取得したい情報のURLを指定 */
-		/* thenの引数には取得したデータが入る */
-		/* catchはデータ取得できなかった場合にエラーを表示 */
-		axios
-			.get("https://jsonplaceholder.typicode.com/users")
-			.then((res) => {
-				console.log(res.data);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	};
-	const onClickUser1 = () => {
-		axios
-			.get("https://jsonplaceholder.typicode.com/users?id=1")
-			.then((res) => {
-				console.log(res.data);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	};
+	// const onClickUsers = () => {
+	// 	/* getで取得したい情報のURLを指定 */
+	// 	/* thenの引数には取得したデータが入る */
+	// 	/* catchはデータ取得できなかった場合にエラーを表示 */
+	// 	axios
+	// 		.get("https://jsonplaceholder.typicode.com/users")
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log(err);
+	// 		});
+	// };
+	// const onClickUser1 = () => {
+	// 	axios
+	// 		.get("https://jsonplaceholder.typicode.com/users?id=1")
+	// 		.then((res) => {
+	// 			console.log(res.data);
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log(err);
+	// 		});
+	// };
 	/* ------------------------- */
 
 	return (
@@ -93,8 +93,8 @@ export const App: FC = () => {
 				{/* -------- udemy06 -------- */}
 
 				{/* -------- udemy08 -------- */}
-				<button onClick={onClickUsers}>users</button>
-				<button onClick={onClickUser1}>user1</button>
+				{/* <button onClick={onClickUsers}>users</button>
+				<button onClick={onClickUser1}>user1</button> */}
 				<Router />
 			</UserProvider>
 		</>
