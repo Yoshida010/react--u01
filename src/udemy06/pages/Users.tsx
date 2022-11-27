@@ -1,9 +1,11 @@
 /** @format */
 
-import { FC } from "react";
+import { FC, useContext } from "react";
 import styled from "styled-components";
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
+import { useLocation } from "react-router-dom";
+import { UserContext } from "../providers/UserProvider";
 
 const users = [...Array(10).keys()].map((val) => {
 	return {
@@ -20,6 +22,9 @@ const users = [...Array(10).keys()].map((val) => {
 });
 
 export const Users: FC = () => {
+	const { state } = useLocation();
+	// const { setUserInfo } = useContext(UserContext);
+
 	return (
 		<SContainer>
 			<h2>ユーザー一覧です</h2>
